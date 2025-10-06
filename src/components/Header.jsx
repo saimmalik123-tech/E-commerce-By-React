@@ -47,7 +47,7 @@ const Header = () => {
         </div>
 
         <div className="cardIcon">
-          <Link to="/card">
+          <Link to="/cart">
             {cartCount > 0 && <p className="cart-badge">{cartCount}</p>}
             <i className="fa-solid fa-cart-shopping"></i>
           </Link>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/ProductSec.css";
+import Modal from "../components/Popup";
 
 const CardCom = ({ data, searchTerm = "" }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleAddToCart = (item) => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -17,7 +20,11 @@ const CardCom = ({ data, searchTerm = "" }) => {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     window.dispatchEvent(new Event("storage"));
+
+    setIsModalOpen(true);
   };
+
+  const closeModal = () => setIsModalOpen(false);
 
   const filteredData = data.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -47,6 +54,8 @@ const CardCom = ({ data, searchTerm = "" }) => {
           </article>
         ))
       )}
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };

@@ -11,7 +11,7 @@ function App() {
       <SearchProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/card" element={<Card />} />
+          <Route path="/cart" element={<Card />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </SearchProvider>
