@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import "../css/Header.css";
 import { Link } from "react-router-dom";
 import { SearchProvider, SearchContext } from "../context/SearchContext";
+import { HashLink } from 'react-router-hash-link';
 
 
 const Header = () => {
@@ -42,7 +43,7 @@ const Header = () => {
         <div className="links">
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
-          <a href="/#contact">Contact Us</a>
+          <HashLink smooth to="/#contact">Contact Us</HashLink>
         </div>
 
         <div className="cardIcon">
