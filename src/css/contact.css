@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --secondary-bg: #f8f9fa;
+  --border-color: #ddd;
+  --transition: all 0.3s ease;
+}
+
+.mainContactCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--secondary-bg);
+  padding: 60px 20px;
+  text-align: center;
+  row-gap: 30px;
+}
+
+.mainContactCon h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.mainContactCon p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.mainContactCon form {
+  background: var(--bg-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.mainContactCon label {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.mainContactCon input,
+.mainContactCon textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: var(--transition);
+}
+
+.mainContactCon input:focus,
+.mainContactCon textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
+}
+
+.mainContactCon textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.mainContactCon button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.mainContactCon button:hover {
+  background: #357abd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainContactCon h2 {
+    font-size: 1.6rem;
+  }
+
+  .mainContactCon p {
+    font-size: 0.95rem;
+  }
+
+  .mainContactCon form {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContactCon h2 {
+    font-size: 1.4rem;
+  }
+
+  .mainContactCon p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #fdfdfd;
+  --text-color: #1e1e1e;
+  --transition: all 0.3s ease;
+}
+
+.mainHeroCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin-top: 80px;
+}
+
+.firstHeroCon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.firstHeroCon h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.firstHeroCon p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+}
+
+.firstHeroCon button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.firstHeroCon button:hover {
+  background: #357ab8;
+  transform: scale(1.05);
+}
+
+.secondHeroCon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.secondHeroCon img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.secondHeroCon img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .mainHeroCon {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .firstHeroCon h1 {
+    font-size: 2.5rem;
+  }
+
+  .firstHeroCon p {
+    margin: 0 auto;
+  }
+
+  .firstHeroCon button {
+    margin: 0 auto;
+  }
+
+  .secondHeroCon {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstHeroCon h1 {
+    font-size: 2rem;
+  }
+
+  .firstHeroCon p {
+    font-size: 1rem;
+  }
+
+  .firstHeroCon button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

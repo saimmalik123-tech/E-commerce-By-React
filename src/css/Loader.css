@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --secondary-bg: #f8f9fa;
+  --border-color: #ddd;
+  --transition: all 0.3s ease;
+}
+
+/* Loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--primary-color) 94%, #0000)
+      top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, var(--primary-color));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: l13 1s infinite linear;
+}
+
+@keyframes l13 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.loaderContainer {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}

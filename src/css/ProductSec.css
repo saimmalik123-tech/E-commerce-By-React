@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --secondary-bg: #f8f9fa;
+  --border-color: #ddd;
+  --transition: all 0.3s ease;
+}
+
+.productSecmainCon {
+  padding: 60px 20px;
+  background: var(--secondary-bg);
+  text-align: center;
+  min-height: 1000px;
+}
+
+.productSecmainCon h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.proContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.proCard {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 25%;
+}
+
+.proCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.proCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.proCard h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.proCard .descriptionPro {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 10px 0 15px;
+  line-height: 1.5;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.proCard h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.proCard .rating {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.buyBtn {
+  padding: 10px 18px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.buyBtn:hover {
+  background: #005ecc;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .productSecmainCon h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .productSecmainCon {
+    padding: 40px 15px;
+  }
+
+  .productSecmainCon h2 {
+    font-size: 1.6rem;
+  }
+
+  .proCard h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productSecmainCon h2 {
+    font-size: 1.4rem;
+  }
+
+  .proCard {
+    padding: 15px;
+  }
+
+  .buyBtn {
+    width: 100%;
+    padding: 12px;
+  }
+}

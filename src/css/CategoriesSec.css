@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #4a90e2;
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --card-bg: #f8f9fa;
+  --transition: all 0.3s ease;
+}
+
+.mainCategoryCon {
+  padding: 60px 8%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.mainCategoryCon h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.categoryCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cateCard {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.cateCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cateCard i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.cateCard:hover i {
+  transform: rotate(360deg);
+}
+
+.cateCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.cateCard p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .categoryCard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .categoryCard {
+    grid-template-columns: 1fr;
+  }
+
+  .mainCategoryCon h2 {
+    font-size: 1.6rem;
+  }
+
+  .cateCard {
+    padding: 24px 18px;
+  }
+}
