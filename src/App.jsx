@@ -7,7 +7,6 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <Router>
       <SearchProvider>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -15,7 +14,6 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </SearchProvider>
-    </Router>
   );
 }
 
